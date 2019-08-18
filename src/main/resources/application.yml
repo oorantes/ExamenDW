@@ -1,0 +1,27 @@
+server:
+    port: 8020
+
+
+spring:
+    application:
+        name: parcial
+        
+    datasource:
+        url: jdbc:mysql://localhost:3306/dbexam?useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        username: root
+        password: rootadmin
+        test-while-idle: true
+        validation-query: SELECT 1
+        max-wait: 20000
+        max-active: 300
+        test-on-borrow: true
+        platform: mysql
+        #pool de conecciones
+        hikari:
+          jdbc-url: jdbc:mysql://localhost:3306/dbexam?useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+          maximum-pool-size: 100
+          idle-timeout: 50000
+          max-lifetime: 2400000
+          connection-timeout: 60000
+          pool-name: mysqlHikariCP
+          minimum-idle: 20
